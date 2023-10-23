@@ -20,9 +20,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python environment
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v2
         with:
-          python-version: 3.10
+          python-version: 3.x
 
       - name: Build Python application
         run: python3 -m build
@@ -37,9 +37,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python environment
-        uses: actions/setup-python@v3
-        with:
-          python-version: 3.10
+        uses: actions/setup-python@v2
+        with:  
+          python-version: 3.x
 
       - name: Install Python application
         run: pip install dist/exercise_1-*.whl
