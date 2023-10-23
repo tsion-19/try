@@ -30,8 +30,8 @@ jobs:
         run: python3 -m build
         
       - name: Build Package
-        run: cd exercise_1 && python setup.py
-
+        run: cd exercise_1 &&  pip install dist/exercise_1-*.whl
+     
   test:
     runs-on: ubuntu-latest
     needs: [build]
