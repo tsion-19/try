@@ -23,6 +23,8 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.x
+      - name: install
+        run: pip install build
 
       - name: Build Python application
         run: python3 -m build
